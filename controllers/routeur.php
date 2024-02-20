@@ -1,5 +1,5 @@
 <?php
-require_once '../public/index.php';
+require_once '../index.php';
 require_once 'controllerAccueil.php';
 require_once 'controllerCar.php';
 require_once '../controllers/jwt.php';
