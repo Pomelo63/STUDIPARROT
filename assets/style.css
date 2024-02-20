@@ -618,7 +618,7 @@ padding:10px;
 
 .login-modal {
     background-color: white;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
@@ -1165,7 +1165,7 @@ input[type="range"] {
 
 #admin-window-content {
     width: 100%;
-    min-height: 800px;
+    min-height: 600px;
     padding-bottom: 40px;
     display: flex;
     align-items: center;
@@ -1750,7 +1750,6 @@ input[type="range"] {
         margin:10px;
     }
     .occasion-card{
-        flex-direction: column;
     }
 }
 @media screen and (max-width: 380px) {
