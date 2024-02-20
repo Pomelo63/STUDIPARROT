@@ -1,35 +1,31 @@
-<!DOCTYPE html>
-<html>
+<?php
+if (getenv('JAWSDB_URL') !== false) {
+  $dbparts = parse_url(getenv('JAWSDB_URL'));
+  $hostname = $dbparts['host'];
+  $username = $dbparts['user'];
+  $password = $dbparts['pass'];
+  $database = ltrim($dbparts['path'], '/');
+} else {
+  $hostname = 'localhost';
+  $database = 'vparrot';
+  $username = 'root';
+  $password = '';
+}
+$adminPwd = 'Vparrot+'; // Admin Password
+$adminHashedPwd = password_hash($adminPwd, PASSWORD_BCRYPT, array('cost' => 10));
 
-<head>
-  <title>Cours PHP / MySQL</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="cours.css">
-</head>
+try {
+  $dbco = new PDO("mysql:host=$hostname", $username, $password);
+  $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-<body>
-  <h1>Bases de données MySQL</h1>
-  <?php
-  $servname = 'localhost';
-  $dbname = 'vparrot';
-  $user = 'root';
-  $pass = '';
-
-  $adminPwd = 'Vparrot+'; // Admin Password
-  $adminHashedPwd = password_hash($adminPwd, PASSWORD_BCRYPT, array('cost' => 10));
-
-  try {
-    $dbco = new PDO("mysql:host=$servname", $user, $pass);
-    $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    $sql = "drop DATABASE if exists $dbname;
+  $sql = "drop DATABASE if exists $dbname;
     CREATE DATABASE $dbname";
-    $dbco->exec($sql);
+  $dbco->exec($sql);
 
-    $dbco = new PDO("mysql:host=$servname;dbname=$dbname", $user, $pass);
-    $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $dbco = new PDO("mysql:host=$servname;dbname=$dbname", $user, $pass);
+  $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $sql = "
+  $sql = "
                 /*Créer un profil user avec moins de droit*/
 
                 CREATE USER if not exists 'basicuser'@'localhost' IDENTIFIED BY 'password';
@@ -128,14 +124,14 @@
                 insert into T_CARSFORSALE(CARSFORSALE_DATE,CARSFORSALE_REF,CARSFORSALE_MAINIMAGE,CARSFORSALE_IMAGE,CARSFORSALE_TITLE,CARSFORSALE_PRICE,CARSFORSALE_YEAR,CARSFORSALE_ENERGY,CARSFORSALE_KILOMETER,CARSFORSALE_COLOR,CARSFORSALE_GEARSHIFT,CARSFORSALE_GSTATE,CARSFORSALE_INFORMATIONS) values
                 (Now(), 'YZREF5', 'main.jpeg', 'main.jpeg;juke.jpeg', 'Nissan Juke 2L5', '12650', '2018', 'diesel', '72000', 'rouge', 'automatique', 'très bon état', 'radar de recul;attache remorque');
                 ";
-                
 
-    $dbco->exec($sql);
-    echo 'La base de donnée et les différents tables sont créées !';
-  } catch (PDOException $e) {
-    echo "Erreur : " . $e->getMessage();
-  }
-  ?>
+
+  $dbco->exec($sql);
+  echo 'La base de donnée et les différents tables sont créées !';
+} catch (PDOException $e) {
+  echo "Erreur : " . $e->getMessage();
+}
+?>
 </body>
 
 </html>
