@@ -88,4 +88,7 @@ Par vos identifiants.
 Attention il est impératif d'utiliser un logiciel permettant de mettre en place un serveur local : ex XAMPP, WAMPP
 - Admin login (email/password) is: vparrot@parrot.com && mdp is Vparrot+
 
+Il se peut que pour générer le TOKEN vous deviez créer un fichier config.php dans le chemin suivant /models/ 
+pour y entrer une clé de token personnalisé qui servira de signature.
+
 ================================================================================>
