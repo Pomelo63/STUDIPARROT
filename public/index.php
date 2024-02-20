@@ -1,6 +1,6 @@
 <?php 
 
-require './controllers/routeur.php';
+require '../controllers/routeur.php';
 
 $routeur= new Router();
 $routeur->routerRequest();
