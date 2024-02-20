@@ -1,7 +1,7 @@
 <?php
 
 /**Cette classe utilise le modèle de connection à la bdd */
-require_once 'Model.php';
+require_once 'model.php';
 
 /** hérite de la classe abstraite Model.
  * contient les méthode pour récupérer les services proposés par le garage.

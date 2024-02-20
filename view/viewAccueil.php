@@ -19,6 +19,7 @@
         $avisArray = array();
         //Boucle sur tous les billets
         if (!empty($services)) {
+
             foreach ($services as $service) :
                 array_push($prestaArray, [$service['name'], $service['type']]);
             endforeach; ?>

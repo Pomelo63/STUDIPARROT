@@ -1,6 +1,6 @@
 <?php
 
-require_once './models/service.php';
+require_once '../models/service.php';
 
 class ControllerService
 {
