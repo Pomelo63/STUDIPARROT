@@ -2,7 +2,7 @@
 require_once '../public/index.php';
 require_once 'controllerAccueil.php';
 require_once 'controllerCar.php';
-require_once '../models/jwt.php';
+require_once './controllers/jwt.php';
 
 class Router
 {
