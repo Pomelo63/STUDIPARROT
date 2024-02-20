@@ -9,10 +9,10 @@ $avis = $ctrlAvis->getCommentOrdered();
     <div><i class="fa-solid fa-comment" id="add-new-comment-admin" onclick="openNewCommentModal()"></i></div>
 </div>
 <div class="user-line-container">
-    <div class='user-line'>
+    <div class='user-line displayed-late-line'>
         <div class="user-box">Date</div>
         <div class="user-box">Nom</div>
-        <div class="user-box">Contenu</div>
+        <div class="user-box user-box-content-resize">Contenu</div>
         <div class="user-box">Note</div>
         <div class="user-box">Etat</div>
         <div class="user-box">Accepter</div>
@@ -25,7 +25,7 @@ $avis = $ctrlAvis->getCommentOrdered();
             <div class='user-line' id='<?= $valeur['id'] ?>'>
                 <div class="user-box"><?= $valeur['date'] ?></div>
                 <div class="user-box"><?= $valeur['auteur'] ?></div>
-                <div class="user-box"><?= $valeur['contenu'] ?></div>
+                <div class="user-box user-box-content-resize"><?= $valeur['contenu'] ?></div>
                 <div class="user-box"><?= $valeur['note'] ?></div>
                 <div class="user-box"><?= $valeur['status'] ?></div>
                 <?php if ($valeur['status'] == "actif") { ?>

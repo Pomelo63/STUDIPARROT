@@ -1,4 +1,4 @@
-<?php $this->titre = "Garage V.Parrot"; 
+<?php $this->titre = "Garage V.Parrot";
 ?>
 
 <section class="main-img-container">
@@ -26,70 +26,83 @@
 
             <article class="service-article">
                 <img src='../assets/images/mecanic.jpeg' alt="moteur de véhicule" class="service-img" />
-                <h3 class="service-article-title">Mécanique</h3>
-                <div class="service-article-txt">
-                    <?php
-                    foreach ($prestaArray as $presta) :
-                        if ($presta[1] == "Mecanique") {
-                    ?>
-                            <p><?php echo $presta[0]; ?></p>
-                    <?php }
-                    endforeach; ?>
+                <div class="txt-resize-service">
+                    <h3 class="service-article-title">Mécanique</h3>
+                    <div class="service-article-txt">
+
+                        <?php
+                        foreach ($prestaArray as $presta) :
+                            if ($presta[1] == "Mecanique") {
+                        ?>
+                                <p><?php echo $presta[0]; ?></p>
+                        <?php }
+                        endforeach; ?>
+                    </div>
                 </div>
                 <div class="carbon-color service-article-footer"></div>
             </article>
             <article class="service-article">
                 <img src='../assets/images/entretient.jpeg' alt="jante d'une voiture" class="service-img" />
-                <h3 class="service-article-title">Entretien</h3>
-                <div class="service-article-txt">
-                    <?php
-                    foreach ($prestaArray as $presta) :
-                        if ($presta[1] == "Entretien") {
-                    ?>
-                            <p><?php echo $presta[0]; ?></p>
-                    <?php }
-                    endforeach; ?>
-                </div>
+                <div class="txt-resize-service">
+                    <h3 class="service-article-title">Entretien</h3>
+                    <div class="service-article-txt">
+                        <?php
+                        foreach ($prestaArray as $presta) :
+                            if ($presta[1] == "Entretien") {
+                        ?>
+                                <p><?php echo $presta[0]; ?></p>
+                        <?php }
+                        endforeach; ?>
+                    </div>
+                </div >
                 <div class="carbon-color service-article-footer"></div>
             </article>
 
             <article class="service-article">
                 <img src='../assets/images/carrosserie.jpeg' alt="parchoc avant en peinture" class="service-img" />
-                <h3 class="service-article-title">Carrosserie</h3>
-                <div class="service-article-txt">
-                    <?php
-                    foreach ($prestaArray as $presta) :
-                        if ($presta[1] == "Carrosserie") {
-                    ?>
-                            <p><?php echo $presta[0]; ?></p>
-                    <?php }
-                    endforeach; ?>
+                <div class="txt-resize-service">
+                    <h3 class="service-article-title">Carrosserie</h3>
+                    <div class="service-article-txt">
+                        <?php
+                        foreach ($prestaArray as $presta) :
+                            if ($presta[1] == "Carrosserie") {
+                        ?>
+                                <p><?php echo $presta[0]; ?></p>
+                        <?php }
+                        endforeach; ?>
+                    </div>
                 </div>
                 <div class="carbon-color service-article-footer"></div>
             </article>
         <?php } else { ?>
             <article class="service-article">
                 <img src='../assets/images/mecanic.jpeg' alt="moteur de véhicule" class="service-img" />
-                <h3 class="service-article-title">Mécanique</h3>
-                <div class="service-article-txt">
-                    <p></p>
+                <div class="txt-resize-service">
+                    <h3 class="service-article-title">Mécanique</h3>
+                    <div class="service-article-txt">
+                        <p></p>
+                    </div>
                 </div>
                 <div class="carbon-color service-article-footer"></div>
             </article>
             <article class="service-article">
                 <img src='../assets/images/entretient.jpeg' alt="jante d'une voiture" class="service-img" />
-                <h3 class="service-article-title">Entretien</h3>
-                <div class="service-article-txt">
-                    <p></p>
+                <div class="txt-resize-service">
+                    <h3 class="service-article-title">Entretien</h3>
+                    <div class="service-article-txt">
+                        <p></p>
+                    </div>
                 </div>
                 <div class="carbon-color service-article-footer"></div>
             </article>
 
             <article class="service-article">
                 <img src='../assets/images/carrosserie.jpeg' alt="parchoc avant en peinture" class="service-img" />
-                <h3 class="service-article-title">Carrosserie</h3>
-                <div class="service-article-txt">
-                    <p></p>
+                <div class="txt-resize-service">
+                    <h3 class="service-article-title">Carrosserie</h3>
+                    <div class="service-article-txt">
+                        <p></p>
+                    </div>
                 </div>
                 <div class="carbon-color service-article-footer"></div>
             </article>
@@ -97,12 +110,14 @@
         <?php } ?>
 
         <article class="service-article">
-            <a href="<?= "index.php?action=Occasion"?>">
+            <a href="<?= "index.php?action=Occasion" ?>" class="display-flex-link">
                 <img src='../assets/images/occasion.jpeg' alt="Véhicule enroulé d'un bandeau type cadeau" class="service-img" />
-                <h3 class="service-article-title">Occasion</h3>
-                <div class="service-article-txt">
-                    <p>Venez découvrir tout nos véhicules</p>
+                <div class="txt-resize-service">
+                    <h3 class="service-article-title">Occasion</h3>
+                    <div class="service-article-txt">
+                        <p>Venez découvrir tout nos véhicules</p>
 
+                    </div>
                 </div>
                 <div class="carbon-color service-article-footer"></div>
             </a>

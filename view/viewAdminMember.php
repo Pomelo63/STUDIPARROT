@@ -9,7 +9,7 @@ $users = $ctrlMember->getMember();
     <div><i class="fa-solid fa-user-plus" id="add-new-user" onclick="newUserModal()"></i></div>
 </div>
 <div class="user-line-container">
-    <div class='user-line'>
+    <div class='user-line displayed-late-line'>
         <div class="user-box">Nom</div>
         <div class="user-box">Prénom</div>
         <div class="user-box">Email</div>

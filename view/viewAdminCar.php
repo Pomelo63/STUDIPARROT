@@ -8,7 +8,7 @@ $tab = $allCars->getCars();
     <div><i class="fa-solid fa-car" id="add-new-user" onclick="newCarModal()"></i></div>
 </div>
 <div class="admin-car-card-container">
-    <div class='user-line'>
+    <div class='user-line displayed-line'>
         <div class="user-box">Image</div>
         <div class="user-box">carroussel</div>
         <div class="user-box">Référence & titre</div>

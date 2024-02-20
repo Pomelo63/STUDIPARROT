@@ -13,7 +13,7 @@ if (!isset($_COOKIE['access_token']) || !isset($_GET['action']) == 'Admin') {
         $this->titre = "Garage V.Parrot"; ?>
 
         <div class="admin-pannel" id="admin-pannel">
-            <div class="display-flex">
+            <div class="display-flex panel-bar">
                 <div class="admin-pannel-title">Listes des commmandes :</div>
                 <?php if($jwtright === 'admin'){?>
                 <div class="admin-option" id="admin-member" onclick="userView()"><i class="fa-solid fa-user" onclick="userView()"></i></div>

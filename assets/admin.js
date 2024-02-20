@@ -397,7 +397,7 @@ function newCarModal() {
 
         $(function () {
             $("#modal-admin").load("../view/viewNewCarModal.php");
-            disableScroll();
+
         });
 
     } catch { return false; }

@@ -9,7 +9,7 @@ $services = $ctrlService->getServices();
     <h2>GESTIONNAIRE DES SERVICES & PRESTATIONS</h2>
 </div>
 <div class="user-line-container">
-    <div class='user-line'>
+    <div class='user-line displayed-late-line'>
         <div class="user-box">Nom du service</div>
         <div class="user-box">Catégorie du service</div>
         <div class="user-box">Supprimer</div>

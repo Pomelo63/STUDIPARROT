@@ -67,7 +67,28 @@ h2 {
 .header-logo-img {
     width: 280px;
 }
-
+.burger-menu{
+    position:relative;
+}
+.burger-menu-list{
+font-size:1rem;
+position: absolute;
+right:0;
+width:150px;
+background-color: var(--main-color);
+text-decoration: none;
+display: flex;
+flex-direction: column;
+gap:15px;
+padding:10px;
+}
+.invisible{
+    display: none;
+}
+.burger-menu-list >a{
+    text-decoration: none;
+    color:white;
+}
 .header-nav-bar {
     position: absolute;
     right: 40px;
@@ -166,10 +187,6 @@ h2 {
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     transition: all 0.5s ease-in-out;
     box-sizing: border-box;
-}
-
-.service-article:hover {
-    scale: 1.1;
 }
 
 .service-article>a {
@@ -592,7 +609,7 @@ h2 {
 }
 
 .login-modal-background {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     background-color: rgba(15, 15, 15, 0.7);
@@ -683,7 +700,6 @@ h2 {
 .main-contact-page {
     background-color: var(--main-color);
     padding: 80px 100px;
-    ;
     color: var(--light-grey-color);
 }
 
@@ -839,10 +855,6 @@ h2 {
     margin: 0;
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-.occasion-card:hover {
-    scale: 1.1;
 }
 
 .occasion-card-img-container {
@@ -1137,7 +1149,7 @@ input[type="range"] {
 }
 
 .user-box {
-    font-size: 1.2rem;
+    font-size: 1rem;
     flex: 1 1;
     padding: 20px;
 }
@@ -1148,17 +1160,16 @@ input[type="range"] {
 }
 
 .user-line-container {
-    width:90%;
-    margin:auto;
+    width: 90%;
 }
 
 #admin-window-content {
     width: 100%;
-    min-height:800px;
+    min-height: 800px;
     padding-bottom: 40px;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    justify-content: center;
 }
 
 #add-user-form {
@@ -1188,7 +1199,7 @@ input[type="range"] {
 .modal-admin-input {
     width: 100%;
     height: 20px;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 #add-new-presta {
@@ -1200,8 +1211,7 @@ input[type="range"] {
 }
 
 .admin-car-card-container {
-    width:90%;
-   margin:auto;
+    width: 90%;
 }
 
 .admin-card-vehicule {
@@ -1218,7 +1228,7 @@ input[type="range"] {
 
 .car-action-container {
     font-size: 1.6rem;
-    margin:40px auto;
+    margin: 40px auto;
 }
 
 .admin-car-icon {
@@ -1261,13 +1271,15 @@ input[type="range"] {
     color: green;
     cursor: pointer;
 }
-.admin-welcom-msg{
-    padding-top:40px;
+
+.admin-welcom-msg {
+    padding-top: 40px;
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
 }
-#information-button{
+
+#information-button {
     font-size: 1.2rem;
     color: var(--main-color);
     margin: 0 auto;
@@ -1278,12 +1290,14 @@ input[type="range"] {
     background-color: transparent;
     transition: all 0.5s ease-in-out;
 }
-.overflow{
+
+.overflow {
     overflow-y: scroll;
-    width:100%;
-    height:50vh;
+    width: 100%;
+    height: 50vh;
 }
-.car-modal{
+
+.car-modal {
     background-color: white;
     top: 50%;
     left: 50%;
@@ -1298,33 +1312,457 @@ input[type="range"] {
     align-items: center;
     gap: 18px;
 }
-.add-car-form-main{
-width:50%;
-display: flex;
-flex-direction: column;
-gap:12px;
-padding:10px;
-}
-.add-car-form-second{
-    width:50%;
+
+.add-car-form-main {
+    width: 50%;
     display: flex;
     flex-direction: column;
-    gap:12px;
-    padding:10px;
+    gap: 12px;
+    padding: 10px;
 }
-.add-car-form-third{
-    width:100%;
+
+.add-car-form-second {
+    width: 50%;
     display: flex;
     flex-direction: column;
-    gap:12px;
-    padding:10px;
+    gap: 12px;
+    padding: 10px;
 }
+
+.add-car-form-third {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px;
+}
+
 .car-modal-input-container {
     display: flex;
     justify-content: center;
 }
-.admin-car-textarea{
+
+.admin-car-textarea {
     width: 300px;
     height: 100px;
     resize: none;
+}
+
+.burger-menu {
+    display: none;
+}
+
+@media screen and (max-width: 1350px) {
+    .service-article {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        border-radius: 30px;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        transition: all 0.5s ease-in-out;
+        box-sizing: border-box;
+    }
+
+    .service-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .occasion-card {
+        width: 40%;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+    .burger-menu {
+        display: block;
+        color: var(--light-grey-color);
+        font-size: 1.8rem;
+        cursor: pointer;
+        position: absolute;
+        right: 40px;
+        padding: 20px 30px;
+    }
+
+    .header-nav-bar {
+        display: none;
+    }
+
+    .prestation-txt-p {
+        text-align: center;
+        padding: 20px 10% 0 10%;
+    }
+
+    .main-occasion-top {
+        display: flex;
+        justify-content: center;
+        padding: 80px 5% 20px 5%;
+        margin-bottom: 40px;
+
+    }
+
+    .main-occasion-top-img {
+        width: 35%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 30px;
+    }
+
+    .main-occasion-top-txt {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact-section-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .apropos-article-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .form-info-admin {
+        width: 80%;
+        height: 100%;
+        margin: auto;
+        gap: 20px;
+        padding-bottom: 60px;
+    }
+
+    .admin-info-textarea {
+        height: 150px;
+    }
+
+    .user-line {
+        font-size: 1rem;
+    }
+
+    .admin-car-line {
+        flex-direction: column;
+    }
+
+    .user-box-content-resize {
+        flex: 2 1;
+    }
+
+    .displayed-line {
+        display: none;
+    }
+     .car-modal{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        padding:10px;
+        justify-self: center;
+        align-items: center;
+     }
+    .car-modal-input-container {
+        flex-direction: column;
+    }
+    .add-car-form-main{
+        padding:0;
+        gap:5px;
+    }
+    .add-car-form-second{
+        padding:0;
+        gap:5px;
+    }
+    .admin-car-textarea{
+        height:100px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    #service{
+     padding:40px 20px;
+    }
+    .avis-section-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        padding: 0 0 60px 0;
+        color: var(--light-grey-color);
+    }
+
+    .avis-txt-part {
+        width: 90%;
+    }
+
+    .avis-container {
+        width: 70%;
+    }
+
+    .avis-form-part {
+        width: 100%;
+        align-items: center;
+        margin: auto;
+    }
+
+    .footer-first-part {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .footer-info-container {
+        min-width: 50%;
+    }
+
+    .footer-container-border {
+        border: none;
+    }
+
+    .footer-info-tilte {
+        margin: 15px;
+    }
+
+    #footer-openingtime-container {
+        width: 250px;
+        margin: auto;
+    }
+
+    .service-article {
+        position: relative;
+        flex-direction: row;
+        width: 100%;
+        min-height: 300px;
+        border-radius: none;
+    }
+
+    .service-container {
+        flex-direction: column;
+    }
+
+    .service-img {
+        min-height: 300px;
+        width: 300px;
+        border-radius: 30px 0 0 30px;
+    }
+
+    .service-article-title {
+        width: 100%;
+    }
+
+    .txt-resize-service {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .display-flex-link {
+        display: flex;
+        justify-content: center;
+    }
+
+    .service-article-footer {
+        width: 0;
+    }
+
+    .occasion-card {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .occasion-card-img-container {
+        width: 50%;
+        height: 100%;
+    }
+
+    .occasion-card-img {
+        height: 350px;
+        border-radius: 15px 0 0 15px;
+    }
+
+    .occasion-card-txt-container {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        font-size: 1rem;
+        margin: auto;
+    }
+
+    .occasion-filter-bar {
+        flex-direction: column;
+    }
+
+    .main-occasion-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .main-occasion-top-img {
+        height: 200px;
+        width: 60%;
+    }
+
+    .main-occasion-top-txt {
+        width: 80%;
+        gap: 10px;
+
+    }
+
+    .apropos-article-title {
+        width: 100%;
+    }
+
+    .apropos-article {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+
+    .apropos-article-img {
+        width: 70%;
+        height: 200px;
+        margin: auto;
+    }
+
+    .apropos-right-container {
+        width: 90%;
+        margin: auto;
+    }
+
+    .apropos-article-title {
+        margin-top: 20px;
+        padding: 30px 0;
+    }
+
+    .inverted-article {
+        flex-direction: column-reverse;
+    }
+
+    .contact-section-form {
+        padding: 20px 40px;
+    }
+
+    .contact-form-input {
+        width: 100%;
+    }
+
+    .main-contact-page {
+        padding: 80px 30px;
+    }
+
+    #contact-section-txt {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+
+    }
+
+    .contact-section-img {
+        height: auto;
+    }
+
+    .contact-section-img-surground {
+        display: none;
+    }
+
+    .line-contact-icon {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .admin-pannel-title {
+        display: none;
+    }
+
+    .panel-bar {
+        gap: 5%;
+    }
+
+    .admin-welcom-msg {
+        padding: 20px;
+    }
+
+    .user-title {
+        width: 90%;
+    }
+
+
+}
+
+@media screen and (max-width: 780px) {
+    .displayed-late-line {
+        display: none;
+    }
+
+    .user-line {
+        flex-direction: column;
+    }
+
+    .admin-car-line {
+        padding: 15px 0;
+    }
+
+    .user-box {
+        padding: 5px;
+    }
+
+    .footer-second-part {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-second-container {
+        margin: 0;
+    }
+
+    .text-align-left {
+        text-align: center;
+    }
+
+    .login-modal {
+        padding: 10px 0;
+        width: 400px;
+
+    }
+    .display-flex-link{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 600px) {
+    .service-article{
+        flex-direction: column;
+    }
+    .service-img{
+        flex-direction: column;
+        width:100%;
+        min-height:150px;
+        border-radius:30px 30px 0 0
+    }
+    .occasion-card-container{
+        margin:10px;
+    }
+    .occasion-card{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 380px) {
+    .header {
+        height: 80px;
+    }
+
+    .header-logo-img {
+        width: 200px;
+    }
+
+    .burger-menu {
+        padding: 7px 20px;
+    }
 }

@@ -22,7 +22,7 @@
         </div>
     </div>
 </article>
-<article class="display-flex-row apropos-article">
+<article class="display-flex-row apropos-article inverted-article">
 
     <div class="apropos-container apropos-left-container">
         <div class="display-flex-column apropos-article-txt">

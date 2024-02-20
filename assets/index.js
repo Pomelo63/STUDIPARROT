@@ -351,7 +351,14 @@ function filterCards() {
     }
     )
 }
-
+function showBurgerMenu() {
+    const burgerMenu= document.getElementById('burger-menu')
+    if (burgerMenu.classList.contains('invisible')){
+        burgerMenu.classList.remove('invisible')
+    } else{
+        burgerMenu.classList.add('invisible') 
+    }
+}
 
 //CLICK ON LEFT ARROW INDEX
 function changePictureLeft(a, b) {
