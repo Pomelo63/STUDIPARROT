@@ -1,0 +1,4 @@
+- Please note that you need PHP 8.0+ ohigher to execute the script
+- To change the MySQL connection information, please edit db/dbbuilder.php
+- Please to create the database exucute http://localhost/ecf/db/dbbuilder.php
+- Admin login (email/password) is: vparrot@parrot.com && mdp is Vparrot+
