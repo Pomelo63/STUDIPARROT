@@ -91,4 +91,10 @@ Attention il est impératif d'utiliser un logiciel permettant de mettre en place
 Il se peut que pour générer le TOKEN vous deviez créer un fichier config.php dans le chemin suivant /models/ 
 pour y entrer une clé de token personnalisé qui servira de signature.
 
+avec le code suivant:
+
+<?php
+
+const SECRET = 'chainedecaracter';
+
 ================================================================================>
